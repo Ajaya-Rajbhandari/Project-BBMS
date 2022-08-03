@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Blood bank management system </title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="scampgain.css" />
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css"> 
+     *{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: montserrat;
+
+  
+}
+.container{
+      margin-left: 600px;
+    margin-top: 30px;
+
+ max-width: 700px;
+  width: 100%;
+  
+  border-radius: 5px;
+  background: rgb(255,255,255,.2);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.container .title{
+  font-size: 19px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  
+}
+.std{
+ /*max-width: 700px;*/
+  width: 100%;
+  
+  /*padding: 25px 30px;*/
+  border-radius: 5px;
+  /*background: rgb(255,255,255,.2);*/
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.std .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.std .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px 0px 15px 0px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+nav{
+  background: linear-gradient(135deg,  #e6001a, #9b59b6);
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 10px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ 
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 750%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg,  #e6001a, #9b59b6);
+ }
+ form .button input:hover{
+   transform: scale(0.99); 
+  background: linear-gradient(-135deg,  #e6001a, #9b59b6);
+  }
+  .des{
+  padding: 3px;
+  text-align: center;
+ 
+  padding-top: 10px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.card {
+    height: 40%;
+    width: 35%;
+    display: inline-block;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 5px;
+    margin: 2%;
+}
+.image img {
+    margin-top: 5px;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    float: left;
+}
+.breadcrumb_bg {
+    background-image: url(https://hamrolifebank.com/img/Test/Slider-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+}
+.generic-blockquote {
+    padding: 30px 50px 30px 30px;
+    background: #f9f9ff;
+    border-left: 2px solid #cf3d3c;
+}
+</style>
+<body>
+
+	
+
+  <nav class="menubar">
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Be a Hero, Give a Blood</label>
+      <ul>
+        <li><a href="Homepage.php">Home</a></li>
+        <li><a href="donordetail.php">Add Donor</a></li>
+        <li><a href="request.php">Request</a></li>
+        <li><a href="aboutus.html"> ABOUT US <i class="fas fa-caret-down"></i></a>
+                 <div class="submenu">
+                  <p><a href="campgain.html">Campgain</a></p>
+                  <p><a href="donorclub.html">Donor Club</a></p>
+                  <p><a href="event.html">DonationEvents</a></p>
+                  <p><a href="contact.html">Contact Us</a></p>
+                </div>
+              </li>
+            
+        <li>
+        <input type="text" placeholder="Search">
+        <button>Search</button>
+  
+      </li>
+        </ul>
+         </nav>
+<section class="breadcrumb_bg">
+	<div class="t_title">
+		<h1 style="font-size: xx-large;">Campgain-Blood Bank Management System</h1>
+		Blood bank management system has carried out many important campgain through out both urban and rural cities. Our campgains have successfully saved nuemorous lifes by collecting the blood from the donor and providing to the needy people. We promise to run such campgains again and again and minimize the death rates by overcoming the scarcity of blood.
+		
+	</div>
+</section>
+
+         <div class="container"   style="text-align: center;">
+<div class="title">
+	<div class="animate__animated animate__slideInDown">
+		  <blockquote class="generic-blockquote">
+ Blood bank management system has carried out many important campgain through out both urban and rural cities. Our campgains have successfully saved nuemorous lifes by collecting the blood from the donor and providing to the needy people. We promise to run such campgains again and again and minimize the death rates by overcoming the scarcity of blood.
+</blockquote>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="title">
+  
+</div>
+</div>
+
+<div class="card">
+<div class="image">
+  <img src="blood5.jpg">
+</div>
+<p style="text-align: center; font-size: x-large;">Jestha 9, 2018  </p>
+</div>
+
+<div class="container">
+<div class="title">
+	<div class="animate__animated animate__slideInDown">
+		  <blockquote class="generic-blockquote">
+ Blood bank management system has carried out many important campgain through out both urban and rural cities. Our campgains have successfully saved nuemorous lifes by collecting the blood from the donor and providing to the needy people. We promise to run such campgains again and again and minimize the death rates by overcoming the scarcity of blood.
+</blockquote>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="image">
+  <img src="blood6.jpg">
+</div>
+<p style="text-align: center; font-size: x-large;">Chaitra 16, 2018  </p>
+</div>
+
+<div class="container">
+<div class="title">
+	<div class="animate__animated animate__slideInDown">
+		  <blockquote class="generic-blockquote">
+  This Campgain was carried on the date of chaitra 16 fot the purpose of collection of blood.The number of blood donor was about 200 and we have collected many blood with different blood groups.the time of the campgain was about 5 hrs, with in this time we have collected as much as many blood with all of co-operative people.
+</blockquote>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="image">
+
+  <img src="blood7.jpg">
+</div>
+<p style="text-align: center; font-size: x-large;">Ashoj 19, 2019  </p>
+</div>
+
+
+</body>
+
+</html>
+
+

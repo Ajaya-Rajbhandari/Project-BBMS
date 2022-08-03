@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Blood bank management system </title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="scampgain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css"> 
+     *{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: montserrat;
+  background-image: url('plus.jpg');
+  background-size: cover;
+}
+.container{
+      margin-left: 600px;
+    margin-top: 30px;
+ max-width: 700px;
+  width: 100%;
+  
+  
+  border-radius: 5px;
+  background: rgb(255,255,255,.2);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  
+}
+.std{
+ /*max-width: 700px;*/
+  width: 100%;
+  
+  /*padding: 25px 30px;*/
+  border-radius: 5px;
+  /*background: rgb(255,255,255,.2);*/
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px 0px 15px 0px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+nav{
+  background: linear-gradient(135deg,  #e6001a, #9b59b6);
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 10px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ 
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 750%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg,  #e6001a, #9b59b6);
+ }
+ form .button input:hover{
+   transform: scale(0.99); 
+  background: linear-gradient(-135deg,  #e6001a, #9b59b6);
+  }
+  .des{
+  padding: 3px;
+  text-align: center;
+ 
+  padding-top: 10px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.card {
+    height: 25%;
+    width: 35%;
+    display: inline-block;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 5px;
+    margin: 2%;
+}
+.image img {
+    margin-top: 5px;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    float: left;
+}
+.breadcrumb_bg {
+    background-image: url(https://hamrolifebank.com/img/Test/Slider-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+  }
+  .generic-blockquote {
+    padding: 30px 50px 30px 30px;
+    background: #f9f9ff;
+    border-left: 2px solid #cf3d3c;
+}
+</style>
+<body>
+
+  <nav class="menubar">
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Give Life Save Life</label>
+      <ul>
+        <li><a href="Homepage.php">Home</a></li>
+        <li><a href="donordetail.php">Add Donor</a></li>
+        <li><a href="request.php">Request</a></li>
+        <li><a href="aboutus.html"> ABOUT US <i class="fas fa-caret-down"></i></a>
+                 <div class="submenu">
+                  <p><a href="campgain.html">Campaign</a></p>
+                  <p><a href="donorclub.html">Donor_Club</a></p>
+                  <p><a href="event.html">DonationEvents</a></p>
+                  <p><a href="contact.html">Contact_Us</a></p>
+                </div>
+              </li>
+            
+        <li>
+        <input type="text" placeholder="Search">
+        <button>Search</button>
+  
+      </li>
+        </ul>
+         </nav>
+<section class="breadcrumb_bg">
+  <div class="t_title">
+    <h1 style="font-size: xx-large;">Donor Club-Blood Bank Management System</h1>
+    Blood bank management system has 
+    
+  </div>
+</section>
+
+<div class="container">
+<div class="title">
+  <blockquote class="generic-blockquote">
+  <p>Donor clubs serve two main purposes: first, they serve as a donor recognition society, allowing you to show appreciation to your biggest donors. Second, donor clubs provide an incentive for donors to increase their giving and keep it at a certain threshold year after year.Main aim of this system is to encourage people, especially youth to donate blood and ensure a continuous and consistent supply of blood to the patients of Thalassaemia.</p>
+</blockquote>
+</div>
+</div>
+<div class="card">
+
+<div class="image">
+   <img src="blood3.jpg">
+</div>
+</div>
+
+<div class="container">
+<div class="title">
+  <blockquote class="generic-blockquote">
+  <p>Donor clubs serve two main purposes: first, they serve as a donor recognition society, allowing you to show appreciation to your biggest donors. Second, donor clubs provide an incentive for donors to increase their giving and keep it at a certain threshold year after year.Main aim of this system is to encourage people, especially youth to donate blood and ensure a continuous and consistent supply of blood to the patients of Thalassaemia.</p>
+</blockquote>
+</div>
+</div>
+
+<div class="card">
+
+<div class="image">
+   <img src="blood2.jpg">
+</div>
+</div>
+
+<div class="container">
+<div class="title">
+  <blockquote class="generic-blockquote">
+  <p>Donor clubs serve two main purposes: first, they serve as a donor recognition society, allowing you to show appreciation to your biggest donors. Second, donor clubs provide an incentive for donors to increase their giving and keep it at a certain threshold year after year.Main aim of this system is to encourage people, especially youth to donate blood and ensure a continuous and consistent supply of blood to the patients of Thalassaemia.</p>
+</blockquote>
+</div>
+</div>
+
+<div class="card">
+
+<div class="image">
+   <img src="blood5.jpg">
+</div>
+</div>
+</body>
+
+</html>

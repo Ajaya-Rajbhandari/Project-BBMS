@@ -1,0 +1,15 @@
+ *{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  
+background-image:linear-gradient(rgba(0,0,0,0.5),#e6001a), url("blood4.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
